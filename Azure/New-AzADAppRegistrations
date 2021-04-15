@@ -1,0 +1,23 @@
+#Created by http://vcloud-lab.com
+
+#PowerShell az example
+New-AzADApplication -DisplayName TestApp -AvailableToOtherTenants $false -IdentifierUris 'http://localhost'
+
+#Powershell AzureAD example
+Import-Module AzureAD
+Connect-AzureAD
+$azureADAppReg = New-AzureADApplication -DisplayName TestApp -AvailableToOtherTenants $false
+$azureADAppReg
+New-AzureADApplicationPasswordCredential -CustomKeyIdentifier PrimarySecret -ObjectId $azureADAppReg.ObjectId -EndDate ((Get-Date).AddMonths(6))
+
+$certPath = 'C:\Temp\testcert.cer'
+$cert = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Certificate2($certPath)
+$keyValue = [System.Convert]::ToBase64String($cert.GetRawCertData())
+$base64Thumbprint = [System.Convert]::ToBase64String($cert.GetCertHash())
+New-AzureADApplicationKeyCredential -ObjectId $azureADAppReg.ObjectId -CustomKeyIdentifier $base64Thumbprint -Type AsymmetricX509Cert -Usage Verify -Value $keyValue -EndDate (Get-Date).AddMonths(6)
+
+#AzureCLI example
+az login
+az ad app create --display-name TestApp01 --available-to-other-tenants false
+az ad app credential reset --id bd195084-8bea-43cf-a6bb-076ca70e6a48 --credential-description TestSecret
+az ad app credential reset --id bd195084-8bea-43cf-a6bb-076ca70e6a48 --cert "@C:\Temp\testcert.cer" --append
