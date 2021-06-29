@@ -1,0 +1,57 @@
+$username = Read-Host -Prompt 'Type UserName'
+$password = Read-Host -Prompt 'Type Password'
+$websiteName = Read-Host -Prompt 'Type WebSite Name'
+$matchCriteria = Read-Host -Prompt 'Type matchCriteria'
+$serverListPath = Read-Host -Prompt 'Type Server file list Path'
+
+$servers = Get-Content $serverListPath
+
+##########################
+
+foreach ($server in $servers) 
+{
+    Write-Host "Connecting to $server" -BackgroundColor DarkRed
+    $session = New-PSSession -ComputerName $server
+    Write-Host 'IIS installation initiated' -BackgroundColor DarkGreen
+    Install-WindowsFeature -Name Web-Server, Web-WebServer, Web-Common-Http, Web-Default-Doc, Web-Dir-Browsing, Web-Http-Errors, Web-Static-Content, Web-Health, Web-Http-Logging, Web-Performance, Web-Stat-Compression, Web-Security, Web-Filtering, Web-CertProvider, Web-Client-Auth, Web-Cert-Auth, Web-Mgmt-Tools, Web-Mgmt-Console -IncludeManagementTools -ComputerName $server
+    ###########################   
+    Invoke-Command -Session $session -ScriptBlock {
+        param(
+            [string]$username,
+            [string]$password,
+            [string]$websiteName,
+            [string]$matchCriteria
+        )
+        Write-Host 'New local user is getting created and added to Administrators group' -BackgroundColor DarkGreen
+        New-LocalUser -FullName $username -AccountNeverExpires -Name $username -Description 'IIS User' -PasswordNeverExpires -UserMayNotChangePassword -Password ($password | ConvertTo-SecureString -Force -AsPlainText)
+        Start-Sleep -Seconds 5
+        Add-LocalGroupMember -Group Administrators -Member $username
+        ##########################
+        Write-Host "Enable SSL settings" -BackgroundColor DarkGreen
+        Set-WebConfiguration -Location $websiteName -Filter "system.webserver/security/access" -Value "Ssl,SslNegotiateCert, SslRequireCert"
+        Start-Sleep -Seconds 5
+        Write-Host "Enable many to one mapping" -BackgroundColor DarkGreen
+        Set-WebConfigurationProperty -location $websiteName -filter "system.webServer/security/authentication/iisClientCertificateMappingAuthentication" -name enabled -value true 
+        Start-Sleep -Seconds 5    
+        ##########################
+        Write-Host "Add many to one mapping info" -BackgroundColor DarkGreen
+        Add-WebConfigurationProperty -location $websiteName -filter "system.webServer/security/authentication/iisClientCertificateMappingAuthentication/manyToOneMappings" -name "." -value @{name='FirstUser';description='many-to-one';userName="$env:COMPUTERNAME\$username";password=$password}
+        Start-Sleep -Seconds 5
+        Write-Host "Add many to one mapping rule" -BackgroundColor DarkGreen
+        Add-WebConfigurationProperty -location $websiteName -filter "system.webServer/security/authentication/iisClientCertificateMappingAuthentication/manyToOneMappings/add[@name='FirstUser']/rules" -name "." -value @{certificateField='Subject';certificateSubField='CN';matchCriteria=$matchCriteria; compareCaseSensitive='true'}
+        ##########################
+    } -ArgumentList $username, $password, $websiteName, $matchCriteria
+
+<#
+    Invoke-Command -Session $session -ScriptBlock {
+        Write-Host "netsh reports" -BackgroundColor DarkGreen
+        $sshcertResult =  netsh http show sslcert 
+        ($sshCertResult | Select-String 'IP:Port')[1]
+        ($sshCertResult | Select-String 'Certificate Hash')[1]
+        $ipAddress = Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceIndex -ne 1} | Select-Object -ExpandProperty IPAddress
+        netsh http delete sslcert ipport=$ipAddress:443
+        netsh http add sslcert ipport=$ipAddress:443 certhash=<
+    }
+    Disconnect-PSSession -Session $session
+#>	
+}
