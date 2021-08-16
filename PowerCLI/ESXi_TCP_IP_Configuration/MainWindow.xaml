@@ -1,0 +1,58 @@
+﻿<Window x:Class="Esxi_TCP_IP_Configuration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Esxi_TCP_IP_Configuration"
+        mc:Ignorable="d"
+        Title="ESXi server TCP/IP configuration      - http://vcloud-lab.com" Height="400" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="28*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <GroupBox x:Name="groupBox_Authentication" Header="VC/ESXi Authentication" Grid.ColumnSpan="2"  Grid.RowSpan="6" Margin="5,5,5,0">
+            <StackPanel>
+                <Label x:Name="label_vCenter" Content="vCenter or ESXi Server:" Height="23" VerticalAlignment="Top" Margin="5,0,5,0"/>
+                <TextBox x:Name="textBox_vCenter" Height="23" Text="marvel.vcloud-lab.com" TextWrapping="Wrap" Margin="5,0,5,0"/>
+                <Label x:Name="label_UserName" Height="23" Content="UserName:" Margin="5,0,5,0"/>
+                <TextBox x:Name="textBox_UserName" Height="23" Text="administrator@vsphere.local" TextWrapping="Wrap" Margin="5,0,5,0"/>
+                <Label x:Name="label_Password"  Content="Password:" Height="23" Margin="5,0,5,0"/>
+                <PasswordBox x:Name="passwordBox_Password" Height="23" Password="Computer@1" Margin="5,0,5,0"/>
+                <Button x:Name="button_Login" Content="Login" Height="21" Margin="5,2,5,2" Width="70" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </GroupBox>
+        <TextBlock x:Name="textBlock_ESXiList" Grid.Column="2" Text="ESXi Server List:" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="button_ESXiList" Content="ESXi List" Height="22"  Grid.Column="4" Margin="5,5,5,5" IsEnabled="False"/>
+        <ListBox x:Name="listBox_ESXiList" Grid.Column="2" Grid.Row="1" Margin="5,0,5,5" Grid.ColumnSpan="3" Grid.RowSpan="5"/>
+        <DataGrid x:Name="dataGrid_TcpIpConf" Grid.Row="7" Margin="5,0,5,5" Grid.ColumnSpan="5" Grid.RowSpan="3"/>
+        <Button x:Name="button_TCPIPConf" Content="Get TCP/IP Conf" Height="22" Grid.Column="3" Grid.ColumnSpan="2" Margin="5,5,5,5" IsEnabled="False" Grid.Row="6"/>
+        <TextBlock x:Name="textBlock_TcpIpConf" HorizontalAlignment="Left" Margin="5,0,5,5" Grid.Row="6" Text="Current TCP/IP Configuration:" TextWrapping="Wrap" VerticalAlignment="Center" Grid.ColumnSpan="2" />
+        <TextBlock x:Name="textBlock_Logs" Grid.Column="5" Text="Configuration Logs:" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="logTextBox" Grid.Column="5" Margin="5,0,5,5" Grid.Row="1" Text="Logs" TextWrapping="Wrap" Grid.ColumnSpan="3" Grid.RowSpan="5" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="textBox_Remove" Grid.Column="6" Margin="5,5,5,5" Grid.Row="7" Text="{Binding SelectedItem.Name, ElementName=dataGrid_TcpIpConf}" TextWrapping="Wrap" VerticalAlignment="Center" Grid.ColumnSpan="2" IsReadOnly="True"/>
+        <Button x:Name="button_Add" Content="Add" Grid.Column="5" Grid.Row="8" Margin="15,7,15,10"/>
+        <Button x:Name="button_Remove" Content="Remove" Grid.Column="5" Grid.Row="7" Margin="15,10,15,7" />
+        <TextBox x:Name="textBox_Add" Grid.Column="6" Margin="5,5,5,5" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock_AddRemoveMessage" Grid.Column="5" HorizontalAlignment="Left" Grid.ColumnSpan="3" Margin="15,0,5,5" Grid.Row="9" Text="Restriction: Don't Add/Remove stacks names with Default, Provisioning, vMotion, defaultTcpipStack" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Maroon"/>
+    </Grid>
+</Window>
