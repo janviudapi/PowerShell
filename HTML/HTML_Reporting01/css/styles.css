@@ -1,0 +1,187 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    color: #606060;
+}
+
+.textbox {
+    /*
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABClpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wUmlnaHRzOk1hcmtlZD0iVHJ1ZSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzI3NTdDRTExNUFCMTFFMUE5NURCRkMwMEFDNjhEQUMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzI3NTdDRTIxNUFCMTFFMUE5NURCRkMwMEFDNjhEQUMiPiA8ZGM6cmlnaHRzPiA8cmRmOkFsdD4gPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIE5vbi1Db21tZXJjaWFsIE5vIERlcml2YXRpdmVzPC9yZGY6bGk+IDwvcmRmOkFsdD4gPC9kYzpyaWdodHM+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcyNzU3Q0RGMTVBQjExRTFBOTVEQkZDMDBBQzY4REFDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjcyNzU3Q0UwMTVBQjExRTFBOTVEQkZDMDBBQzY4REFDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SoKR9AAAAH5JREFUeNpi/P//PwMlgImBQsDS39/fAKTrydTfyESBZhCoR/bCAig9AYgZceAFaGpRwiARKlEAxPOx2AYSS4CqSYSHAZoimEQCGh+rZmwGYDOEAZdmXAZgMwSrZnwGMKBpSMSZDghEUyLtUyIS+z+5eaGRAgc0Mg54bgQIMAAD7RsCMDpK7QAAAABJRU5ErkJggg==) no-repeat 10px 9px #FFF;
+    */
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFWUExURQAAACtj/ytx/zlj/y1x/zJp/zBq+i9r/S9r/y9q/S9s/y5r/TBr/TBs/y9r/y9q/jFq/zFs/zBs/jBq/zBr/i9r/ydl/yhl/yhm/ylm/yomLypn/ysnMCtn/yw1XCxk9Sxl9Sxo/y1BgS1Cgi1Cgy1p/y5p/y5r/y9p9S9q/y9r/y9s/zBl7DBl7TBp9zBq9zBq+jBq/zBr/zBs/zBt/zFr/zFs/zFt/zFv/zFw/zJr/zJv/zZv/zxz7zxz80t+/0x+/0x//1pqeltqel+t52Ct6GCu6GKu6GOv6GSv6WSw6Wex6WiT/2mT/26W/329632+7H6+7H+97YCj/4Ck/4Gk/4G+7YbC7Yur/4us/4ys/5fL76K3x6O3xrXZ9LXa9LjN/7jd9Lze9b3e9b/T/sLi9cXY/cXY/szk+Mzl+M3e/M3f/NXk/NXl/Njr+tnr+vTdKv3+/JXkJVsAAAAWdFJOUwASEhIiLjCBgYKOj4/ExcfH7O/x8f4EasA3AAAACXBIWXMAAAsSAAALEgHS3X78AAABIklEQVQoU0XQWVfCMBAF4LC1UpZSoIhWVJSK4soUaTQoLqhoFRRFUFzA4r7//xeTtuq85Tv3JJmLrPH5I3E5HvH77CMdTzCKdQDQcTTosckbJrNKIqlSLeCwl5E7RNKlWru5mZqhikNuagJJl/vPPfPtlCUBCwhxklbq3982KvXPwxS1osQhnii1p5tzw9jtdK0g4ZGoJ9q9hmEY+ycvq8x0EcW0weZdhVq19ZBnpsWQDOrGe33noLpnXgwxA5nmIHX20Tlumd9Xa1k7J+qQU4+6r4+X11/b45p1H08AcsrUcj65vjU8uaCxdzmpaN0CkB2bGMks6fR/SMCOgTadGZ1boXvQff9xcd7el/aCCw7+9oKQK/DXX8BlEx2n5wHWM0I/LyE7H65tRB0AAAAASUVORK5CYII=') no-repeat 10px 9px #FFF;
+    border: 1px solid #c4c4c4; 
+    height: 25px; 
+    width: 325px; 
+    font-size: 13px; 
+    padding: 5px 5px 5px 35px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+} 
+ 
+.textbox:focus { 
+    outline: none; 
+    border: 1px solid #FF8000; /* #7bc1f7; */
+    -moz-box-shadow: 0px 0px 8px #FF8000; /* #7bc1f7; */
+    -webkit-box-shadow: 0px 0px 8px #FF8000; /* #7bc1f7; */
+    box-shadow: 0px 0px 8px #FF8000; /* #7bc1f7; */
+}
+/*
+#btn {
+    background-color: #FF8000;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #d9d9d9;
+    border-radius: 4px;
+    width: 130px;
+  }
+*/
+
+#btn {
+    position: relative;
+    background-color: #FF8000;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 160px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #d9d9d9;
+    border-radius: 4px;
+}
+
+#btn:after {
+    content: "";
+    background: #FDF2E9;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+  
+#btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+hr.line01 {
+    border: 3px solid #FF8000;
+    border-radius: 5px;
+    
+}
+
+div.SecondPhaseResult {
+    width: 600px;
+    height: 380px;
+    border: 2px solid #FF8000;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+table {
+    text-align: left;
+}
+
+.SecondResultTH {
+    width: 30%;
+    padding: 7px;
+}
+
+.SecondPhaseResult {
+    font-size: 14px;
+}
+/*---ToolTip---*/
+
+.tooltip-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.tooltip-wrap .tooltip-content {
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background-color: #0080ff;
+    padding: .5em;
+    width: 100%;
+}
+
+.tooltip-wrap:hover .tooltip-content {
+    display: block;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    color: white;
+    font-size: 11px;
+}
+
+/*---menu---*/
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 1000px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+}
+
+.openbtn {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+.openbtn:hover {
+    background-color:#444;
+}

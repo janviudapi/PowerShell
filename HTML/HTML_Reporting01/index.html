@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Pragma">
+        <meta http-equiv="Expires" content="0">
+        <meta name="viewport" X-Content-Type-Options="nosniff" content="width=device-width, initial-scale=1"/>
+        <title>Server Asset Intentory - http://vcloud-lab.com</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="js/javascript.js"></script>
+    </head>
+    <body>
+        <header>
+            <table>
+                <tr>
+                    <td> <img src="images/server_inventory_logo.png" alt="server_inventory_logo" width="100" height="100">&nbsp;&nbsp;</td>
+                    <td> <h1>vCloud-Lab <br> Asset (Hardware) Inventory</h1></td>
+                </tr>
+            </table> 
+            <hr class="line01">
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#">Asset Inventory</a>
+                <a href="#">VMware</a>
+                <a href="#">Azure</a>
+                <a href="http://vcloud-lab.com">Contact</a>
+            </div>
+            <button class="openbtn" onclick="openNav()">☰ Navigation Bar</button>
+
+            <table>
+                <tr>
+                    <td> <p>Server Name:&nbsp;&nbsp;</p> </td>
+                    <td> <input type="text" id="myText"  aria-label="Your Server Name" class="textbox" value="localhost"> </td>
+                    <td> <button id="btn" onclick="GenerateData()">Search Server</button> </td>
+                </tr>
+            </table> 
+        </header>
+        <div id='FirstPhaseResult'>
+            Type Server name and click search button for Hardware information...
+<!-- Testing data
+            <script>
+                document.getElementById("FirstPhaseResult").innerHTML = data[0].name;
+            </script>
+-->        
+        </div>
+        <div class='SecondPhaseResult'>
+            <table>
+                <tr>
+                    <th class='SecondResultTH'>Computer: </th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='Computer'>
+<!-- Add below part programatically
+                            <div class="tooltip-content">
+                                <p>Replace this paragraph with Table</p>
+                            </div>
+--> 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class='SecondResultTH'>Operating System:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='OperatingSystem'>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class='SecondResultTH'>MotherBoard:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='MotherBoard'>
+                        </div>
+                    </td>
+                </tr>                
+                <tr>
+                    <th class='SecondResultTH'>Processor:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='Processor'>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class='SecondResultTH'>Memory:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='Memory'>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class='SecondResultTH'>Hard Disks:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='HardDisks'>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class='SecondResultTH'>Network Card:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='NetworkCard'>
+                        </div>
+                    </td>
+                </tr>                
+                <tr>
+                    <th class='SecondResultTH'>Video Cards:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='VideoCards'>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <th class='SecondResultTH'>Monitors:</th>
+                    <td class='tddata'>
+                        <div class="tooltip-wrap" id='Monitors'>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <div><p style="font-size: 12px"><strong>Created by: </strong><a href="http://vcloud-lab.com">http://vcloud-lab.com</a></p></div>
+    </body>
+</html>
