@@ -1,9 +1,10 @@
 Import-Module -Name ActiveDirectory
+$credential = Get-Credential -message "connect Active directory"
 $servers = Get-AdComputer -Filter {DNSHostName -like '*'} -Server 192.168.34.11 -Credential $credential
 
 #$servers = 'localhost', $env:COMPUTERNAME,  '127.0.0.1', 'nullserver', '192.168.34.107'
 $result = @()
-$credential = Get-Credential
+$credential = Get-Credential -message "connect Remote server"
 $cimSessionOption = New-CimSessionOption -Protocol Default
 foreach ($computerName in $servers) {
     $hostName = $computerName.Name
