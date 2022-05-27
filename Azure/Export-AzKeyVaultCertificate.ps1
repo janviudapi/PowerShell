@@ -77,6 +77,8 @@ begin
     {
         New-Item -Path $Path -ItemType Directory -Force | Out-Null
     }
+    $certFolderPath = $Path
+    
     #Verify Azure Key Vault and Certificate
     $azKeyVault = Get-AzKeyVault -VaultName $KeyVaultName
     try {
