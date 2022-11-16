@@ -5,8 +5,11 @@
 #.DESCRIPTION
 #This script connect and fetches users list whose password is going to expired in the after mentioned days. 
 #
-#.PARAMETER DaysAfterAlert
-#This is a parameter to set days alerts before user password should get email notification, Provide a number alue.
+#.PARAMETER DaysAfterPasswordExpire
+#Provide a value for a configured policy after how many days password will expire.
+#
+#.PARAMETER DaysBeforeAlert
+#This is a parameter to set days alerts before user password should get email notification, Provide a number value.
 #
 #.PARAMETER SearchBase
 #Provide distingushed name for domain/out to search users.
@@ -18,7 +21,7 @@
 #Email server SMTP port for submission dfault value is 587.
 #
 #.EXAMPLE
-#Send-PasswordExpiryNotification -DaysAfterAlert 30 -SearchBase 'DC=vcloud-lab,DC=com' -From 'no-reply@vcloud-lab.com' -SMTPServer 'emailexchange.vcloud-lab.com' -SMTPPort 587
+#Send-PasswordExpiryNotification -DaysBeforeAlert 30 -SearchBase 'DC=vcloud-lab,DC=com' -From 'no-reply@vcloud-lab.com' -SMTPServer 'emailexchange.vcloud-lab.com' -SMTPPort 587
 #
 #Finds users with expiring password in Active Directory and send notification email.
 #
@@ -31,14 +34,16 @@
 [CmdletBinding()]
 param(
     [Parameter(Position=0)]
-    [Int]$DaysAfterAlert = 30,
+    [Int]$DaysAfterPasswordExpire = 45,
     [Parameter(Position=1)]
-    [System.String]$SearchBase = 'DC=vcloud-lab,DC=com',
+    [Int]$DaysBeforeAlert = 15,
     [Parameter(Position=2)]
-    [System.String]$From = 'no-reply@vcloud-lab.com',
+    [System.String]$SearchBase = 'DC=vcloud-lab,DC=com',
     [Parameter(Position=3)]
-    [System.String]$SMTPServer = 'emailexchange.vcloud-lab.com',
+    [System.String]$From = 'no-reply@vcloud-lab.com',
     [Parameter(Position=4)]
+    [System.String]$SMTPServer = 'emailexchange.vcloud-lab.com',
+    [Parameter(Position=5)]
     [Int]$SMTPPort = 587
 )
 Begin {
@@ -47,15 +52,17 @@ Begin {
     }
 }
 Process {
-    #$DaysAfterAlert = 1
+    #$DaysBeforeAlert = 1
     #$searchBase = "DC=vcloud-lab,DC=com"
     #$from = "noreply@vcloud-lab.com"
     #$smtpServer = "192.168.34.42"
     #$smtpPort = "587"
     #$backDate = (Get-Date).AddDays($days)
 
+    $alertDays = $DaysAfterPasswordExpire - $DaysBeforeAlert
+
     $dateNow = [datetime]::Now
-    $expiryDate = $dateNow.AddDays(-$DaysAfterAlert) #.ToFileTime()
+    $expiryDate = $dateNow.AddDays(-$alertDays) #.ToFileTime()
 
     $filter = {(Enabled -eq $True) -and (PasswordNeverExpires -eq $False) -and (PasswordLastSet -gt $expiryDate)} #-and (PasswordLastSet -gt $rawBackDate)} #-and (PasswordLastSet -gt $backDate) #name -eq 'user1' -and -and (msDS-UserPasswordExpiryTimeComputed -lt $expirtyAlertDate)
     $adProperties = @('PasswordLastSet', 'pwdLastSet', 'msDS-UserPasswordExpiryTimeComputed', 'EmailAddress')
