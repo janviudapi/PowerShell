@@ -1,0 +1,43 @@
+﻿unitId,unitSize,isEmpty,objectType,fetchInfo,unitColor,serverName,owner,department,purpose
+42,1,no,firewall,yes,LightCyan,Firewall1,networksecurity@vcloud-lab.com,Network Security,prevent unauthorized access into or out of a computer network
+41,1,no,firewall,yes,LightCyan,Firewall2,networksecurity@vcloud-lab.com,Network Security,prevent unauthorized access into or out of a computer network
+40,1,no,patchpanel,no,PaleGreen,patchpanel1,cables_wires@vcloud-lab.com,Cabling group,"provides a way to keep large numbers of cables organized, enabling flexible connectivity"
+39,1,no,networkswitch,yes,PaleGreen,Switch1,networking@vcloud-lab.com,Networking,"connects users, applications, and equipment across a network so that they can communicate with one another and share resources."
+38,1,yes,blankslot,no,Gainsboro,blankslot1,datacenteradmin@vcloud-lab.com,Datacenter Admins,empty slots
+37,1,no,networkswitch,yes,PaleGreen,Switch1,networking@vcloud-lab.com,Networking,"connects users, applications, and equipment across a network so that they can communicate with one another and share resources."
+36,1,yes,blankslot,no,Gainsboro,blankslot2,datacenteradmin@vcloud-lab.com,Datacenter Admins,empty slots
+35,1,no,kvmswitch,yes,Pink,KVM1,datacenteradmin@vcloud-lab.com,Datacenter Admins,"allows one to quickly and easily switch between multiple PCs or servers from a single console (keyboard, monitor, mouse setup) for greater efficiency"
+34,1,yes,blankslot,no,Gainsboro,blankslot3,datacenteradmin@vcloud-lab.com,Datacenter Admins,empty slots
+33,1,yes,blankslot,no,Gainsboro,blankslot4,datacenteradmin@vcloud-lab.com,Datacenter Admins,empty slots
+32,2,no,server,yes,LightYellow,server1,winadmin@vcloud-lab.com,Windows Admins,"operating systems designed by Microsoft that supports enterprise-level management, data storage, applications, and communications. "
+31,0,no,server,yes,LightYellow,,,,
+30,2,no,server,yes,LightYellow,server2,winadmin@vcloud-lab.com,Windows Admins,"operating systems designed by Microsoft that supports enterprise-level management, data storage, applications, and communications. "
+29,0,no,server,yes,LightYellow,,,,
+28,2,no,server,yes,LightYellow,server3,linuxadmin@vcloud-lab.com,Linux Admins,"it is designed to handle the most demanding business applications, such as web services and databases. "
+27,0,no,server,yes,LightYellow,,,,
+26,2,no,server,yes,LightYellow,server4,linuxadmin@vcloud-lab.com,Linux Admins,"it is designed to handle the most demanding business applications, such as web services and databases. "
+25,0,no,server,yes,LightYellow,,,,
+24,2,no,server,yes,LightYellow,server5,vmwareadmin@vcloud-lab.com,Virtualization Team,This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server
+23,0,no,server,yes,LightYellow,,,,
+22,2,no,server,yes,LightYellow,server6,vmwareadmin@vcloud-lab.com,Virtualization Team,This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server
+21,0,no,server,yes,LightYellow,,,,
+20,2,no,server,yes,LightYellow,server7,vmwareadmin@vcloud-lab.com,Virtualization Team,This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server
+19,0,no,server,yes,LightYellow,,,,
+18,2,no,server,yes,LightYellow,server8,vmwareteam@vcloud-lab.com,Virtualization Team,This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server
+17,0,no,server,yes,LightYellow,,,,
+16,4,no,bladeserver,yes,Cornsilk,Blade1,kubernetesteam@vcloud-lab.com,Containerization Team,Containerization is one of the technologies that allows developers to build cloud-native applications.
+15,0,no,bladeserver,yes,Cornsilk,,,,
+14,0,no,bladeserver,yes,Cornsilk,,,,
+13,0,no,bladeserver,yes,Cornsilk,,,,
+12,4,no,storageserver,yes,Lavender,Storage1,storageadmin@vcloud-lab.com,Storage Admins,enables its user to store and safely access the data and applications on a computer device
+11,0,no,storageserver,yes,Lavender,,,,
+10,0,no,storageserver,yes,Lavender,,,,
+9,0,no,storageserver,yes,Lavender,,,,
+8,4,no,storageserver,yes,Lavender,Storage2,storageadmin@vcloud-lab.com,Storage Admins,enables its user to store and safely access the data and applications on a computer device
+7,0,no,storageserver,yes,Lavender,,,,
+6,0,no,storageserver,yes,Lavender,,,,
+5,0,no,storageserver,yes,Lavender,,,,
+4,2,no,ups,yes,Azure,UPS1,powergroup@vcloud-lab.com,Power Management," provide backup power, protecting equipment from damage in the event of grid power failure."
+3,0,no,ups,yes,Azure,,,,
+2,2,no,ups,yes,Azure,UPS2,powergroup@vcloud-lab.com,Power Management," provide backup power, protecting equipment from damage in the event of grid power failure."
+1,0,no,ups,yes,Azure,,,,

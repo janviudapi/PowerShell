@@ -1,0 +1,800 @@
+[
+  {
+    "department": "Network Security",
+    "isEmpty": "no",
+    "unitId": "42",
+    "objectType": "firewall",
+    "fetchInfo": "yes",
+    "unitSize": "1",
+    "purpose": "prevent unauthorized access into or out of a computer network",
+    "unitColor": "LightCyan",
+    "serverName": "Firewall1",
+    "serverinfo": {
+      "status": "off",
+      "ipaddress": "Firewall1",
+      "servername": "Firewall1",
+      "name": "Firewall1",
+      "id": "Firewall1"
+    },
+    "owner": "networksecurity@vcloud-lab.com"
+  },
+  {
+    "department": "Network Security",
+    "isEmpty": "no",
+    "unitId": "41",
+    "objectType": "firewall",
+    "fetchInfo": "yes",
+    "unitSize": "1",
+    "purpose": "prevent unauthorized access into or out of a computer network",
+    "unitColor": "LightCyan",
+    "serverName": "Firewall2",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "Firewall2",
+      "name": "Firewall2",
+      "id": "Firewall2"
+    },
+    "owner": "networksecurity@vcloud-lab.com"
+  },
+  {
+    "department": "Cabling group",
+    "isEmpty": "no",
+    "unitId": "40",
+    "objectType": "patchpanel",
+    "fetchInfo": "no",
+    "unitSize": "1",
+    "purpose": "provides a way to keep large numbers of cables organized, enabling flexible connectivity",
+    "unitColor": "PaleGreen",
+    "serverName": "patchpanel1",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "patchpanel1",
+      "name": "patchpanel1",
+      "id": "patchpanel1"
+    },
+    "owner": "cables_wires@vcloud-lab.com"
+  },
+  {
+    "department": "Networking",
+    "isEmpty": "no",
+    "unitId": "39",
+    "objectType": "networkswitch",
+    "fetchInfo": "yes",
+    "unitSize": "1",
+    "purpose": "connects users, applications, and equipment across a network so that they can communicate with one another and share resources.",
+    "unitColor": "PaleGreen",
+    "serverName": "Switch1",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "Switch1",
+      "name": "Switch1",
+      "id": "Switch1"
+    },
+    "owner": "networking@vcloud-lab.com"
+  },
+  {
+    "department": "Datacenter Admins",
+    "isEmpty": "yes",
+    "unitId": "38",
+    "objectType": "blankslot",
+    "fetchInfo": "no",
+    "unitSize": "1",
+    "purpose": "empty slots",
+    "unitColor": "Gainsboro",
+    "serverName": "blankslot1",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "blankslot1",
+      "name": "blankslot1",
+      "id": "blankslot1"
+    },
+    "owner": "datacenteradmin@vcloud-lab.com"
+  },
+  {
+    "department": "Networking",
+    "isEmpty": "no",
+    "unitId": "37",
+    "objectType": "networkswitch",
+    "fetchInfo": "yes",
+    "unitSize": "1",
+    "purpose": "connects users, applications, and equipment across a network so that they can communicate with one another and share resources.",
+    "unitColor": "PaleGreen",
+    "serverName": "Switch1",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "Switch1",
+      "name": "Switch1",
+      "id": "Switch1"
+    },
+    "owner": "networking@vcloud-lab.com"
+  },
+  {
+    "department": "Datacenter Admins",
+    "isEmpty": "yes",
+    "unitId": "36",
+    "objectType": "blankslot",
+    "fetchInfo": "no",
+    "unitSize": "1",
+    "purpose": "empty slots",
+    "unitColor": "Gainsboro",
+    "serverName": "blankslot2",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "blankslot2",
+      "name": "blankslot2",
+      "id": "blankslot2"
+    },
+    "owner": "datacenteradmin@vcloud-lab.com"
+  },
+  {
+    "department": "Datacenter Admins",
+    "isEmpty": "no",
+    "unitId": "35",
+    "objectType": "kvmswitch",
+    "fetchInfo": "yes",
+    "unitSize": "1",
+    "purpose": "allows one to quickly and easily switch between multiple PCs or servers from a single console (keyboard, monitor, mouse setup) for greater efficiency",
+    "unitColor": "Pink",
+    "serverName": "KVM1",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "KVM1",
+      "name": "KVM1",
+      "id": "KVM1"
+    },
+    "owner": "datacenteradmin@vcloud-lab.com"
+  },
+  {
+    "department": "Datacenter Admins",
+    "isEmpty": "yes",
+    "unitId": "34",
+    "objectType": "blankslot",
+    "fetchInfo": "no",
+    "unitSize": "1",
+    "purpose": "empty slots",
+    "unitColor": "Gainsboro",
+    "serverName": "blankslot3",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "blankslot3",
+      "name": "blankslot3",
+      "id": "blankslot3"
+    },
+    "owner": "datacenteradmin@vcloud-lab.com"
+  },
+  {
+    "department": "Datacenter Admins",
+    "isEmpty": "yes",
+    "unitId": "33",
+    "objectType": "blankslot",
+    "fetchInfo": "no",
+    "unitSize": "1",
+    "purpose": "empty slots",
+    "unitColor": "Gainsboro",
+    "serverName": "blankslot4",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "blankslot4",
+      "name": "blankslot4",
+      "id": "blankslot4"
+    },
+    "owner": "datacenteradmin@vcloud-lab.com"
+  },
+  {
+    "department": "Windows Admins",
+    "isEmpty": "no",
+    "unitId": "32",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "operating systems designed by Microsoft that supports enterprise-level management, data storage, applications, and communications. ",
+    "unitColor": "LightYellow",
+    "serverName": "server1",
+    "serverinfo": {
+      "status": "off",
+      "ipaddress": "server1",
+      "servername": "server1",
+      "name": "server1",
+      "id": "server1"
+    },
+    "owner": "winadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "31",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Windows Admins",
+    "isEmpty": "no",
+    "unitId": "30",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "operating systems designed by Microsoft that supports enterprise-level management, data storage, applications, and communications. ",
+    "unitColor": "LightYellow",
+    "serverName": "server2",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "server2",
+      "name": "server2",
+      "id": "server2"
+    },
+    "owner": "winadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "29",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Linux Admins",
+    "isEmpty": "no",
+    "unitId": "28",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "it is designed to handle the most demanding business applications, such as web services and databases. ",
+    "unitColor": "LightYellow",
+    "serverName": "server3",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "server3",
+      "name": "server3",
+      "id": "server3"
+    },
+    "owner": "linuxadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "27",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Linux Admins",
+    "isEmpty": "no",
+    "unitId": "26",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "it is designed to handle the most demanding business applications, such as web services and databases. ",
+    "unitColor": "LightYellow",
+    "serverName": "server4",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "server4",
+      "name": "server4",
+      "id": "server4"
+    },
+    "owner": "linuxadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "25",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Virtualization Team",
+    "isEmpty": "no",
+    "unitId": "24",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server",
+    "unitColor": "LightYellow",
+    "serverName": "server5",
+    "serverinfo": {
+      "status": "off",
+      "ipaddress": "server5",
+      "servername": "server5",
+      "name": "server5",
+      "id": "server5"
+    },
+    "owner": "vmwareadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "23",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Virtualization Team",
+    "isEmpty": "no",
+    "unitId": "22",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server",
+    "unitColor": "LightYellow",
+    "serverName": "server6",
+    "serverinfo": {
+      "status": "unknown",
+      "ipaddress": "Unknown",
+      "servername": "server6",
+      "name": "server6",
+      "id": "server6"
+    },
+    "owner": "vmwareadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "21",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Virtualization Team",
+    "isEmpty": "no",
+    "unitId": "20",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server",
+    "unitColor": "LightYellow",
+    "serverName": "server7",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "server7",
+      "name": "server7",
+      "id": "server7"
+    },
+    "owner": "vmwareadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "19",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Virtualization Team",
+    "isEmpty": "no",
+    "unitId": "18",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": "This enables IT organizations to run more than one virtual system – and multiple operating systems and applications – on a single server",
+    "unitColor": "LightYellow",
+    "serverName": "server8",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "server8",
+      "name": "server8",
+      "id": "server8"
+    },
+    "owner": "vmwareteam@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "17",
+    "objectType": "server",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "LightYellow",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Containerization Team",
+    "isEmpty": "no",
+    "unitId": "16",
+    "objectType": "bladeserver",
+    "fetchInfo": "yes",
+    "unitSize": "4",
+    "purpose": "Containerization is one of the technologies that allows developers to build cloud-native applications.",
+    "unitColor": "Cornsilk",
+    "serverName": "Blade1",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "Blade1",
+      "name": "Blade1",
+      "id": "Blade1"
+    },
+    "owner": "kubernetesteam@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "15",
+    "objectType": "bladeserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Cornsilk",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "14",
+    "objectType": "bladeserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Cornsilk",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "13",
+    "objectType": "bladeserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Cornsilk",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Storage Admins",
+    "isEmpty": "no",
+    "unitId": "12",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "4",
+    "purpose": "enables its user to store and safely access the data and applications on a computer device",
+    "unitColor": "Lavender",
+    "serverName": "Storage1",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "Storage1",
+      "name": "Storage1",
+      "id": "Storage1"
+    },
+    "owner": "storageadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "11",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Lavender",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "10",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Lavender",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "9",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Lavender",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Storage Admins",
+    "isEmpty": "no",
+    "unitId": "8",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "4",
+    "purpose": "enables its user to store and safely access the data and applications on a computer device",
+    "unitColor": "Lavender",
+    "serverName": "Storage2",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "Storage2",
+      "name": "Storage2",
+      "id": "Storage2"
+    },
+    "owner": "storageadmin@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "7",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Lavender",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "6",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Lavender",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "5",
+    "objectType": "storageserver",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Lavender",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Power Management",
+    "isEmpty": "no",
+    "unitId": "4",
+    "objectType": "ups",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": " provide backup power, protecting equipment from damage in the event of grid power failure.",
+    "unitColor": "Azure",
+    "serverName": "UPS1",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "UPS1",
+      "name": "UPS1",
+      "id": "UPS1"
+    },
+    "owner": "powergroup@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "3",
+    "objectType": "ups",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Azure",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  },
+  {
+    "department": "Power Management",
+    "isEmpty": "no",
+    "unitId": "2",
+    "objectType": "ups",
+    "fetchInfo": "yes",
+    "unitSize": "2",
+    "purpose": " provide backup power, protecting equipment from damage in the event of grid power failure.",
+    "unitColor": "Azure",
+    "serverName": "UPS2",
+    "serverinfo": {
+      "status": "on",
+      "ipaddress": "127.0.0.1",
+      "servername": "UPS2",
+      "name": "UPS2",
+      "id": "UPS2"
+    },
+    "owner": "powergroup@vcloud-lab.com"
+  },
+  {
+    "department": "",
+    "isEmpty": "no",
+    "unitId": "1",
+    "objectType": "ups",
+    "fetchInfo": "yes",
+    "unitSize": "0",
+    "purpose": "",
+    "unitColor": "Azure",
+    "serverName": "",
+    "serverinfo": {
+      "status": "n/a",
+      "ipaddress": "n/a",
+      "servername": "n/a",
+      "name": "n/a",
+      "id": "n/a"
+    },
+    "owner": ""
+  }
+]

@@ -1,0 +1,178 @@
+/*
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+*/
+
+/*  Start button navbar*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+/*  End button navbar*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#maincontainer, #references {
+    display: flex;
+}
+
+#references {
+    margin-left: 40px;
+    flex-wrap: wrap;
+    border: 1px solid coral;
+    margin: 10px;
+    position: sticky;
+    top: 0;
+    border-radius: 5px;
+    width: 200px;
+    font-size: xx-small;
+}
+
+.divRack {
+    margin-left: 10%;
+    width: 450px;
+    border: 1px solid coral;
+    padding: 10px;
+}
+
+h2.title {
+    text-align: center; 
+}
+
+table.cabinets {
+/* border-collapse: collapse; */
+border-collapse: separate;
+border-spacing: 0 5px; /* Adjust the second value (20px) as per your desired gap */
+width: 100%;
+}
+
+td, th { 
+padding: 8px;
+/* height: 50px; */
+}
+
+td {
+    border: 1px solid darkgray;
+}
+
+td.tightunit {
+    width: 1%;
+    white-space: nowrap;
+    
+}
+
+th.tightunit {
+    white-space: nowrap;
+}
+
+.tdDiv {
+    display: flex;
+    /*
+    .titleImage
+    justify-content: center;
+    align-items: center;
+    */
+}
+
+/* --- pie info --- */
+@property --p {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+}
+
+.pie {
+    --c: Tomato;
+    --w: 100px; /* ; Size of the border of dought */
+    --b: 18px; /* Size of the border of dought */
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.pie:before,
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie:before {
+inset: 0;
+background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+            conic-gradient(var(--c) calc(var(--p)*1%), #0001 0);
+-webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+        mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+/* --- pie info --- */

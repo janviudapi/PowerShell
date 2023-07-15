@@ -1,0 +1,111 @@
+[
+    {
+        "unitId": "09",
+        "unitSize": 1,
+        "isEmpty": "no",
+        "objectType": "server",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverName": "host9",
+        "serverinfo": {
+            "servername": "host9",
+            "ipaddress": "192.168.34.9"
+        }
+    }, 
+    {
+        "unitId": "08",
+        "unitSize": 1,
+        "isEmpty": "no",
+        "objectType": "firewall",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host8",
+            "ipaddress": "192.168.34.8"
+        }
+    },            
+    {
+        "unitId": "07",
+        "unitSize": 2,
+        "isEmpty": "no",
+        "objectType": "storageserver",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host7",
+            "ipaddress": "192.168.34.7"
+        }
+    },            
+    {
+        "unitId": "06",
+        "unitSize": 0,
+        "isEmpty": "no",
+        "objectType": "Patch Panel",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host6",
+            "ipaddress": "192.168.34.6"
+        }
+    },            
+    {
+        "unitId": "05",
+        "unitSize": 1,
+        "isEmpty": "no",
+        "objectType": "patchpanel",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host5",
+            "ipaddress": "192.168.34.5"
+        }
+    },
+    {
+        "unitId": "04",
+        "unitSize": 3,
+        "isEmpty": "no",
+        "objectType": "empty",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host4",
+            "ipaddress": "192.168.34.4"
+        }
+    },
+    {
+        "unitId": "03",
+        "unitSize": 0,
+        "isEmpty": "no",
+        "objectType": "empty",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host3",
+            "ipaddress": "192.168.34.3"
+        }
+    },
+    {
+        "unitId": "02",
+        "unitSize": 0,
+        "isEmpty": "no",
+        "objectType": "empty",
+        "fetchInfo": true,
+        "unitColor": "teal",
+        "serverinfo": {
+            "servername": "host2",
+            "ipaddress": "192.168.34.2"
+        }
+    },
+    {
+        "unitId": "01",
+        "unitSize": 1,
+        "isEmpty": "no",
+        "objectType": "ups",
+        "unitColor": "teal",
+        "fetchInfo": true,
+        "serverinfo": {
+            "servername": "host1",
+            "ipaddress": "192.168.34.1"
+        }
+    }
+]
