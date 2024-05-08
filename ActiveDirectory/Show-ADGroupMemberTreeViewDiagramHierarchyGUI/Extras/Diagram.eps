@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="600">
+        <title>AD Group <%= $GroupName %> Tree</title>
+        <script src="Extras/script.js"></script>
+        <script src="Extras/mermaid.min.js"></script>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 10px;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .showinfo {
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            h3 {
+                color: navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="showinfo">
+            <img src="Extras/group.gif" alt="Active Directory Groups" srcset="Extras/group.gif" width="48px">
+            <h3>Hierarchy of <%= $GroupName %></h3>
+            <h5>Generated on <%= (([datetime]::Now).DateTime) %></h4>
+            <div class="mermaid">
+                <%= $diagram %>
+            </div>
+        </div>
+    </body>
+</html>
