@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Disks Flow</title>
+    <script src="_extras/script.js"></script>
+    <script src="_extras/mermaid.min.js"></script>
+    <link rel="stylesheet" href="_extras/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Digram embedded directly -->
+    <div class="showinfo">
+        <h4>VM <i class="fas fa-hdd"></i> : <%= $vmName %></h4>
+        <h5>Generated on <%= (([datetime]::Now).DateTime) %></h4>
+        <div class="mermaid">
+            %% ---
+            %% title: HDD Chart 
+            %% ---
+            %%{ init: {
+                'theme': 'default',
+                'themeVariables':
+                    {'fontSize': '20px', 'fontFamily': 'Tahoma'}
+            }}%% 
+            %% graph TB;
+            graph LR;
+            <%= $links %>
+        </div>
+    </div>
+</body>
+</html>

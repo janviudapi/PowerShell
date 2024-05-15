@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Disks Flow</title>
+    <script src="_extras/script.js"></script>
+    <script src="_extras/mermaid.min.js"></script>
+    <link rel="stylesheet" href="_extras/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Digram embedded directly -->
+    <div class="showinfo">
+        <h4>VM <i class="fas fa-hdd"></i> : ad001.vcloud-lab.com</h4>
+        <h5>Generated on 15 May 2024 06:30:14</h4>
+        <div class="mermaid">
+            %% ---
+            %% title: HDD Chart 
+            %% ---
+            %%{ init: {
+                'theme': 'default',
+                'themeVariables':
+                    {'fontSize': '20px', 'fontFamily': 'Tahoma'}
+            }}%% 
+            %% graph TB;
+            graph LR;
+                  C(C: fa:fa-computer) ===> PHYSICALDRIVE0;        style C stroke:#FFFFFF,fill:#ff595e,color:white,fontSize:30px;
+      PHYSICALDRIVE0 ===> SCSI00(SCSI0:0 fa:fa-server);
+        style PHYSICALDRIVE0 stroke:#FFFFFF,fill:#ff924c;
+      SCSI00(SCSI0:0) -.-> SCSI0;
+        style SCSI00 stroke:#FFFFFF,fill:#ffca3a;
+      SCSI0 -.-> Harddisk1(Hard disk 1);
+        style SCSI0 stroke:#FFFFFF,fill:#8ac926;
+        style Harddisk1 stroke:#FFFFFF,fill:#1982c4,color:white;      Harddisk1(Hard disk 1) ---> StarLord_Datastore01(StarLord_Datastore01 fa:fa-database);        style StarLord_Datastore01 stroke:#FFFFFF,fill:#6a4c93,color:white;      E(E: fa:fa-computer) ===> PHYSICALDRIVE1;        style E stroke:#FFFFFF,fill:#ff595e,color:white,fontSize:30px;
+      PHYSICALDRIVE1 ===> SCSI01(SCSI0:1 fa:fa-server);
+        style PHYSICALDRIVE1 stroke:#FFFFFF,fill:#ff924c;
+      SCSI01(SCSI0:1) -.-> SCSI0;
+        style SCSI01 stroke:#FFFFFF,fill:#ffca3a;
+      SCSI0 -.-> Harddisk2(Hard disk 2);
+        style SCSI0 stroke:#FFFFFF,fill:#8ac926;
+        style Harddisk2 stroke:#FFFFFF,fill:#1982c4,color:white;      Harddisk2(Hard disk 2) ---> StarLord_Datastore01(StarLord_Datastore01 fa:fa-database);        style StarLord_Datastore01 stroke:#FFFFFF,fill:#6a4c93,color:white;
+        </div>
+    </div>
+</body>
+</html>

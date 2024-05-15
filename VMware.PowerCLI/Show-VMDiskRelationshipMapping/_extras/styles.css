@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+    margin: 10px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.showinfo {
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+h4 {
+    color: navy;
+}
