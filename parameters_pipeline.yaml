@@ -1,0 +1,45 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+pool:
+  vmImage: ubuntu-latest
+
+parameters:
+  - name: stringText1
+    displayName: string Text Example1
+    type: string
+
+  - name: stringText2
+    displayName: string Text Example2
+    type: string
+    default: ' '
+
+  - name: image
+    displayName: Pool Images
+    type: string
+    values:
+      - windows-latest
+      - ubuntu-latest
+
+  - name: checkBox
+    displayName: checkbox ?
+    type: boolean
+    default: false
+
+stages:
+  - stage: build
+    jobs:
+      - job: Parameters
+        pool: 
+          vmImage: ${{ parameters.image }}
+        steps:
+          - powershell: |
+              Write-Host "String Text Example1: ${{ parameters.stringText1 }}"
+              Write-Host "String Text Example2: ${{ parameters.stringText2 }}"
+              Write-Host "image: ${{ parameters.image }}"
+              Write-Host "image: ${{ parameters.checkBox }}"
