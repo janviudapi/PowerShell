@@ -1,3 +1,8 @@
+# vCenter Update Script
+# created by vCloud-Lab.com
+# This script shows vCenter Server Appliance (VCSA) version using the vSphere REST API.
+# This script requires PowerShell 7 or newer
+
 param (
     [string]$vcServer = "marvel.vcloud-lab.com",
     [string]$vcUser = "administrator@vsphere.local",
