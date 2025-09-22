@@ -74,16 +74,16 @@ foreach ($vmHost in $vmHosts)
     $taskInfo | Select-Object @{Name='ESXi';Expression={$vmHost.Name}}, State, StartTime, FinishTime, PercentComplete, @{Name='Before_Renew';Expression={$dateBeforeRenew.NotBefore}}, @{Name='After_Renew';Expression={$dateAfterRenew.NotBefore}}
 }
 
-foreach ($vmHost in $vmHosts)
-{
-    $hostParameters = New-Object VMware.Vim.ManagedObjectReference[] (1)
-    $hostParameters[0] = New-Object VMware.Vim.ManagedObjectReference
-    $hostParameters[0].Type = $vmHost.ExtensionData.MoRef.Type #'HostSystem'
-    $hostParameters[0].Value = $vmHost.ExtensionData.MoRef.Value #'host-3023'
-    $certificateManager = Get-View -Id 'CertificateManager-certificateManager'
-    $taskID = $certificateManager.CertMgrRefreshCertificates_Task($hostParameters)
-    $taskInfo = Get-Task -Id $taskID.ToString()
-    while ($taskInfo.State -eq 'Running') {
-        $taskInfo = Get-Task -Id $taskID.ToString()
-    }
-}
+#foreach ($vmHost in $vmHosts)
+#{
+#    $hostParameters = New-Object VMware.Vim.ManagedObjectReference[] (1)
+#    $hostParameters[0] = New-Object VMware.Vim.ManagedObjectReference
+#    $hostParameters[0].Type = $vmHost.ExtensionData.MoRef.Type #'HostSystem'
+#    $hostParameters[0].Value = $vmHost.ExtensionData.MoRef.Value #'host-3023'
+#    $certificateManager = Get-View -Id 'CertificateManager-certificateManager'
+#    $taskID = $certificateManager.CertMgrRefreshCertificates_Task($hostParameters)
+#    $taskInfo = Get-Task -Id $taskID.ToString()
+#    while ($taskInfo.State -eq 'Running') {
+#        $taskInfo = Get-Task -Id $taskID.ToString()
+#    }
+#}
